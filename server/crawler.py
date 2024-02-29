@@ -3,7 +3,7 @@ import requests
 from bs4 import BeautifulSoup
 import re
 
-TIMEOUT = 20  # time limit in seconds for the search
+TIMEOUT = 3600  # time limit in seconds for the search
 
 def get_links(page_url):
     print(f"Fetching page: {page_url}")
@@ -38,7 +38,7 @@ def find_path(start_page, finish_page):
                 return path + [next], logs, elapsed_time, len(discovered) # return with success
             else:
                 log = f"Adding link to queue: {next} (depth {depth})"
-                print(log)
+                # print(log)
                 logs.append(log)
                 discovered.add(next)
                 queue.append((next, path + [next], depth + 1))
