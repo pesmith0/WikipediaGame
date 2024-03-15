@@ -1,5 +1,5 @@
 # Wikipedia Game Improvement Proposal
-Author: Peter Smith
+Group: Peter Smith
 
 ## Improvement Description
 The wikipedia game currently conducts a breadth-first search of all hyperlinks on each page, starting from the starting page and finishes when it expands the target page. The two major changes to improve this are:
