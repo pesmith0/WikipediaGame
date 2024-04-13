@@ -20,6 +20,9 @@ def find_path():
         data = request.get_json()
         start_page = data['start']
         finish_page = data['finish']
+        # print("start_page = " + start_page)
+        # import sys
+        # sys.exit()
 
         path, logs, time, discovered = crawler.find_path(start_page, finish_page)
 
