@@ -21,6 +21,11 @@ def find_path():
         start_page = data['start']
         finish_page = data['finish']
         # print("start_page = " + start_page)
+        # print("start_page type = " + str(type(start_page)))
+
+        # start_page = https://en.wikipedia.org/wiki/Martin_Wirsing
+        # start_page type = <class 'str'>
+        
         # import sys
         # sys.exit()
 
