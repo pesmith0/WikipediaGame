@@ -30,14 +30,16 @@ For David Hilbert, some pages can be found during the search that lack categorie
 
 ## Pseudo-Code
 Note: this pseudo-code is completely obsolete because of the degree to which the project design evolved
-```# these lines are generally duplicated so that there are two simultaneous searches -- could also use multithreading as an optimization
+```
+# these lines are generally duplicated so that there are two simultaneous searches -- could also use multithreading as an optimization
 while true:
     #### first run existing code that conducts a breadth first search, adding nodes to the bottom of a frontier (defines local variable called node), and breaks if a path is found
     if node.text starts with "Category:"
         # move node to top of frontier, but below any existing nodes that start with "Category:"
     if other_search.discovered.has(node):
         # move node to top of frontier
-        continue```
+        continue
+```
 
 ## Milestones
 1) Implement part 1 of the improvement (conduct search in category pages first). (deadline can be April 10th)
