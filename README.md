@@ -6,7 +6,14 @@ This README is a modified version of the original WikipediaGame README, and cont
 
 (these instructions should work under GNU/Linux and Macos and WSL)
 
-Prerequisites: Python
+Prerequisites: Python 3.11.5, termcolor
+
+Installing termcolor:
+```
+pip install termcolor
+```
+
+Installing WikipediaGame:
 
 ```
 git clone https://github.com/pesmith0/WikipediaGame
@@ -67,6 +74,8 @@ For David Hilbert, some pages can be found during the search that lack categorie
 
 My fork works identically to the original repo in terms of UI. The output is colored according to which of the three searches is being done. The elapsed time is summed from all three searches.
 
-The default starting and target pages, Martin Wirsing to David Hilbert, are a working test. Another working path is Bee to Eiffel_Tower, which is a very long path because of insects belonging to a very long category hierarchy (however, it should still only take a few seconds to compute). A much shorter path can be found between United_States and Russia, because they both occupy the countries category.
+The default starting and target pages, Martin Wirsing to David Hilbert, are a working test. Another working path is Bee to Eiffel_Tower, which is a very long path because of insects belonging to a very long category hierarchy (however, it should still only take a few seconds to compute). A much shorter path can be found between United_States and Russia, because they both occupy the countries category. Eiffel_Tower to Eiffel_Tower also works.
+
+During development I tested many other paths and with the current version, never found one that doesn't work.
 
 Be careful not to put a redirect URL as the target page. For example, Bee to Eiffel_Tower will work, but Bee to Eiffel_tower will not work. This is because no links to "Eiffel_tower" can be found on the pages, but links to "Eiffel_Tower" can be found, even though actually visiting "Eiffel_tower" in the browser will redirect you to "Eiffel_Tower". Making this mistake will cause the search to enter an infinite loop during the cyan output stage.
