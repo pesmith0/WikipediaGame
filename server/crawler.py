@@ -82,7 +82,7 @@ def find_path(start_page, finish_page):
     path_to_articles_ret = find_path_helper(start_page, ARTICLES)
 
     print_color = "light_cyan"
-    opposite_path_to_midpoint_ret = find_path_helper(finish_page, ARTICLES, opposite_with_path = path_to_articles_ret[0])
+    opposite_path_to_midpoint_ret = find_path_helper(finish_page, ARTICLES, opposite_with_path = path_to_articles_ret[0], check_backlinks = True)
 
     print_color = "green"
     midpoint = opposite_path_to_midpoint_ret[0][-1]
@@ -102,7 +102,7 @@ def find_path(start_page, finish_page):
 
     # return find_path_helper(start_page, finish_page)
 
-def find_path_helper(start_page, finish_page, reverse_with_path : list = None, opposite_with_path : list = None):
+def find_path_helper(start_page, finish_page, reverse_with_path : list = None, opposite_with_path : list = None, check_backlinks : bool = False):
     reverse = bool(reverse_with_path)
 
     queue = [(start_page, [start_page], 0)] # (vertex, path, depth)
@@ -161,7 +161,7 @@ def find_path_helper(start_page, finish_page, reverse_with_path : list = None, o
         
 
         # check if this vertex has a link back to its parent (ensures that a reverse path will be found later)
-        if not reverse and len(path) >= 2:
+        if check_backlinks and not reverse and len(path) >= 2:
             found_backlink = False
             previous = path[-2]
             for next in sum_of_links_unfiltered:
