@@ -31,7 +31,6 @@ The console output is bright green, cyan, and dark green respectively for the th
 - If the above point is violated, the search will run indefinitely, and the cyan output will have a lot of red error messages stating that a backlink to the target URL cannot be found (because it is not the real URL).
 - Implemented via HTTP requests (no websocket connection between client and server).
 - Users are identified by IP address (no cookies or sessions).
-- ...
 
 ## Parameters
 
