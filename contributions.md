@@ -36,7 +36,9 @@ Be careful not to put a redirect URL as the target page. For example, Bee to Eif
 
 ## Sample inputs
 
+```
 Martin_Wirsing, David_Hilbert
 Bee, Eiffel_Tower
 United_States, Russia
 Eiffel_Tower, Eiffel_Tower
+```
