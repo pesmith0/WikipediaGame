@@ -6,7 +6,7 @@ This README is a modified version of the original WikipediaGame README, and cont
 
 (these instructions should work under GNU/Linux and Macos and WSL)
 
-Prerequisites: Python 3.11, termcolor (note: setup.sh should install these automatically)
+Prerequisites: Python 3.11.5, termcolor (note: setup.sh should install these automatically)
 
 Installing termcolor manually:
 ```
